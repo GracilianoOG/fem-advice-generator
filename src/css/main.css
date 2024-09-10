@@ -25,6 +25,7 @@ body {
 
 .card {
   background-color: hsl(217, 19%, 24%);
+  margin: 16px;
   text-align: center;
 }
 .card__id {
