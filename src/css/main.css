@@ -31,6 +31,7 @@ body {
   padding-bottom: 58px;
   position: relative;
   text-align: center;
+  max-width: 540px;
 }
 .card__id {
   color: hsl(150, 100%, 66%);
