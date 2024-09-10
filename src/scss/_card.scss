@@ -1,0 +1,63 @@
+@use "./variables";
+
+.card {
+  background-color: variables.$color-dark-grayish-blue;
+  border-radius: 10px;
+  padding: 42px 26px;
+  padding-bottom: 58px;
+  position: relative;
+  text-align: center;
+  max-width: variables.$max-width-card;
+
+  &__id {
+    color: variables.$color-neon-green;
+    font-size: variables.$font-size-id-mobile;
+    letter-spacing: variables.$letter-spacing-id-mobile;
+    margin-bottom: 26px;
+    text-transform: uppercase;
+  }
+
+  &__advice {
+    color: variables.$color-light-cyan;
+    font-size: variables.$font-size-advice-mobile;
+    margin-bottom: 26px;
+  }
+
+  &__button {
+    background-color: variables.$color-neon-green;
+    border: 0;
+    border-radius: 50%;
+    bottom: 0;
+    cursor: pointer;
+    left: 50%;
+    padding: 20px;
+    position: absolute;
+    transform: translate(-50%, 50%);
+    transition: box-shadow 0.1s;
+
+    &:hover {
+      box-shadow: 0 0 18px 14px rgba(variables.$color-neon-green, 0.3);
+      filter: saturate(1.2);
+    }
+  }
+
+  &__icon {
+    display: block;
+  }
+
+  @media screen and (min-width: variables.$breakpoint-md) {
+    & {
+      padding: 48px 42px 68px 42px;
+    }
+
+    &__id {
+      font-size: variables.$font-size-id-desktop;
+      letter-spacing: variables.$letter-spacing-id-desktop;
+    }
+
+    &__advice {
+      font-size: variables.$font-size-advice-desktop;
+      margin-bottom: 40px;
+    }
+  }
+}
