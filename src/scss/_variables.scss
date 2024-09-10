@@ -7,16 +7,16 @@ $color-dark-grayish-blue: hsl(217, 19%, 24%);
 $color-dark-blue: hsl(218, 23%, 16%);
 
 // Containers
-$max-width-card: 540px;
+$max-width-card: 33.75rem; // 540px
 
 // Text
 $font-family-primary: "Manrope", sans-serif;
-$font-size-id-mobile: 12px;
-$letter-spacing-id-mobile: 2.8px;
-$letter-spacing-id-desktop: 3.2px;
-$font-size-id-desktop: 14.2px;
-$font-size-advice-mobile: 23.5px;
-$font-size-advice-desktop: 28px;
+$font-size-id-mobile: 0.75rem; // 12px
+$letter-spacing-id-mobile: 0.175rem; // 2.8px
+$letter-spacing-id-desktop: 0.2rem; // 3.2px
+$font-size-id-desktop: 0.8875rem; // 14.2px
+$font-size-advice-mobile: 1.46875rem; // 23.5px
+$font-size-advice-desktop: 1.75rem; // 28px
 
 // Breakpoints
-$breakpoint-md: 768px;
+$breakpoint-md: 48rem; // 768px
