@@ -16,12 +16,12 @@ body {
   font-weight: 800;
   min-height: 100vh;
   place-items: center;
+  padding: 16px;
 }
 
 .card {
   background-color: variables.$color-dark-grayish-blue;
   border-radius: 10px;
-  margin: 16px;
   padding: 42px 26px;
   padding-bottom: 58px;
   position: relative;
