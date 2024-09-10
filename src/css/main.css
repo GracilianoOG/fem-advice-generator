@@ -29,6 +29,9 @@ body {
 }
 .card__id {
   color: hsl(150, 100%, 66%);
+  font-size: 12px;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
 }
 .card__advice {
   color: hsl(193, 38%, 86%);
