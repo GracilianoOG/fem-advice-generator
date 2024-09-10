@@ -10,4 +10,8 @@ body {
   display: grid;
   min-height: 100vh;
   place-items: center;
+}
+
+.card {
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
