@@ -1,3 +1,5 @@
+@use "./variables";
+
 *,
 *::after,
 *::before {
@@ -7,11 +9,13 @@
 }
 
 body {
+  background-color: variables.$color-dark-blue;
   display: grid;
   min-height: 100vh;
   place-items: center;
 }
 
 .card {
+  background-color: variables.$color-dark-grayish-blue;
   text-align: center;
 }
