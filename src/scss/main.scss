@@ -12,7 +12,7 @@
 body {
   background-color: variables.$color-dark-blue;
   display: grid;
-  font-family: "Manrope", sans-serif;
+  font-family: variables.$font-family-primary;
   font-weight: 800;
   min-height: 100vh;
   place-items: center;
@@ -26,19 +26,19 @@ body {
   padding-bottom: 58px;
   position: relative;
   text-align: center;
-  max-width: 540px;
+  max-width: variables.$max-width-card;
 
   &__id {
     color: variables.$color-neon-green;
-    font-size: 12px;
-    letter-spacing: 2.8px;
+    font-size: variables.$font-size-id-mobile;
+    letter-spacing: variables.$letter-spacing-id-mobile;
     margin-bottom: 26px;
     text-transform: uppercase;
   }
 
   &__advice {
     color: variables.$color-light-cyan;
-    font-size: 23.5px;
+    font-size: variables.$font-size-advice-mobile;
     margin-bottom: 26px;
   }
 
@@ -64,18 +64,18 @@ body {
     display: block;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: variables.$breakpoint-md) {
     & {
       padding: 48px 42px 68px 42px;
     }
 
     &__id {
-      font-size: 14.2px;
-      letter-spacing: 3.2px;
+      font-size: variables.$font-size-id-desktop;
+      letter-spacing: variables.$letter-spacing-id-desktop;
     }
 
     &__advice {
-      font-size: 28px;
+      font-size: variables.$font-size-advice-desktop;
       margin-bottom: 40px;
     }
   }
