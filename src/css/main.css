@@ -63,4 +63,17 @@ body {
 }
 .card__icon {
   display: block;
+}
+@media screen and (min-width: 768px) {
+  .card {
+    padding: 48px 42px 68px 42px;
+  }
+  .card__id {
+    font-size: 14.2px;
+    letter-spacing: 3.2px;
+  }
+  .card__advice {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
 }/*# sourceMappingURL=main.css.map */
