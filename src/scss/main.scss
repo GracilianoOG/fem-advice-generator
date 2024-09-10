@@ -21,4 +21,12 @@ body {
 .card {
   background-color: variables.$color-dark-grayish-blue;
   text-align: center;
+
+  &__id {
+    color: variables.$color-neon-green;
+  }
+
+  &__advice {
+    color: variables.$color-light-cyan;
+  }
 }
