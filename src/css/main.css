@@ -33,6 +33,7 @@ body {
   color: hsl(150, 100%, 66%);
   font-size: 12px;
   letter-spacing: 2.8px;
+  margin-bottom: 26px;
   text-transform: uppercase;
 }
 .card__advice {
