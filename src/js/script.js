@@ -8,27 +8,31 @@ const toggleActiveState = (element) => {
   element.disabled = !element.disabled;
 }
 
+const fetchAdvice = () => {
+  return fetch(url, { cache: "no-cache" })
+  .then(response => {
+    if(!response.ok) {
+      if(response.status === 404) {
+        throw Error("Advice not found [404].");
+      } else {
+        throw Error(`Response was not ok [${response.status}].`);
+      }
+    }
+    return response.json();
+  })
+  .then(data => {
+    cardId.textContent = data.slip.id;
+    cardAdvice.textContent = data.slip.advice;
+  })
+  .catch(error => {
+    cardAdvice.innerHTML = `<span class="error">${error.message}</span>`;
+    console.error("Fetch error: " + error.message);
+  })
+}
+
 const getAdvice = (url) => {
   toggleActiveState(cardBtn);
-  fetch(url, { cache: "no-cache" })
-    .then(response => {
-      if(!response.ok) {
-        if(response.status === 404) {
-          throw Error("Advice not found [404].");
-        } else {
-          throw Error(`Response was not ok [${response.status}].`);
-        }
-      }
-      return response.json();
-    })
-    .then(data => {
-      cardId.textContent = data.slip.id;
-      cardAdvice.textContent = data.slip.advice;
-    })
-    .catch(error => {
-      cardAdvice.innerHTML = `<span class="error">${error.message}</span>`;
-      console.error("Fetch error: " + error.message);
-    })
+  fetchAdvice(url)
     .finally(() => {
       toggleActiveState(cardBtn);
     });
