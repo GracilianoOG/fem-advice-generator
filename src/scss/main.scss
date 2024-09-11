@@ -1,15 +1,8 @@
+@use "./reset";
 @use "./variables";
 @use "./animations";
 @use "./fonts";
 @use "./card";
-
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
 
 .sr-only {
   border: 0;
