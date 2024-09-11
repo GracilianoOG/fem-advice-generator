@@ -11,12 +11,21 @@ const toggleActiveState = (element) => {
 const getAdvice = (url) => {
   toggleActiveState(cardBtn);
   fetch(url, { cache: "no-cache" })
-    .then(response => response.json())
+    .then(response => {
+      if(!response.ok) {
+        if(response.status === 404) {
+          throw Error("Advice not found [404].");
+        } else {
+          throw Error(`Response was not ok [${response.status}].`);
+        }
+      }
+      return response.json();
+    })
     .then(data => {
       cardId.textContent = data.slip.id;
       cardAdvice.textContent = data.slip.advice;
     })
-    .catch(error => console.error("Fetch error: " + error))
+    .catch(error => console.error("Fetch error: " + error.message))
     .finally(() => {
       toggleActiveState(cardBtn);
     });
