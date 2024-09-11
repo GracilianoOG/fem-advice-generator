@@ -42,6 +42,6 @@ body {
   filter: grayscale(0.8);
 
   & > img {
-    animation: loading 0.65s infinite linear;
+    animation: loading 0.75s infinite ease-in-out;
   }
 }
