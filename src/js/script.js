@@ -30,7 +30,7 @@ const fetchAdvice = async () => {
   }
 }
 
-const getAdvice = () => {
+const handleClick = () => {
   toggleActiveState(cardBtn);
   fetchAdvice()
     .finally(() => {
@@ -38,8 +38,8 @@ const getAdvice = () => {
     });
 }
 
-getAdvice();
-cardBtn.addEventListener("click", getAdvice);
+handleClick();
+cardBtn.addEventListener("click", handleClick);
 
 // == Old fetch function that uses .then() ==
 // const fetchAdvice = () => {
