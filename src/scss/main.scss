@@ -34,7 +34,7 @@ body {
 }
 
 .error {
-  color: hsl(0, 100%, 66%);
+  color: variables.$color-light-red;
 }
 
 .disabled {
