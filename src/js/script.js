@@ -3,9 +3,13 @@ const cardAdvice = document.querySelector(".js-card-advice");
 const cardBtn = document.querySelector(".js-card-button");
 const url = "https://api.adviceslip.com/advice";
 
+const toggleActiveState = (element) => {
+  element.classList.toggle("disabled");
+  element.disabled = !element.disabled;
+}
+
 const getAdvice = (url) => {
-  cardBtn.disabled = true;
-  cardBtn.classList.add("disabled");
+  toggleActiveState(cardBtn);
   fetch(url, { cache: "no-cache" })
     .then(response => response.json())
     .then(data => {
@@ -14,8 +18,7 @@ const getAdvice = (url) => {
     })
     .catch(error => console.error("Fetch error: " + error))
     .finally(() => {
-      cardBtn.disabled = false;
-      cardBtn.classList.remove("disabled");
+      toggleActiveState(cardBtn);
     });
 }
 
