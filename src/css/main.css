@@ -90,6 +90,10 @@ body {
   padding: 16px;
 }
 
+.error {
+  color: hsl(0, 100%, 66%);
+}
+
 .disabled {
   cursor: not-allowed;
   filter: grayscale(0.8);
