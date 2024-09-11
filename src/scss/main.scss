@@ -4,6 +4,7 @@
 @use "./fonts";
 @use "./accessibility";
 @use "./card";
+@use "./footer";
 
 body {
   background-color: variables.$color-dark-blue;

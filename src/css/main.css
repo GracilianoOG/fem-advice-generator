@@ -99,6 +99,17 @@
   }
 }
 
+.footer {
+  bottom: 10px;
+  color: white;
+  font-size: 0.875rem;
+  position: absolute;
+  text-align: center;
+}
+.footer__link {
+  color: hsl(150, 100%, 66%);
+}
+
 body {
   background-color: hsl(218, 23%, 16%);
   display: grid;
