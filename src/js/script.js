@@ -12,10 +12,13 @@ const fetchAdvice = async () => {
   try {
     const response = await fetch(url, { cache: "no-cache" });
     if(!response.ok) {
-      if(response.status === 404) {
+      const statusCode = response.status;
+      if(statusCode === 404) {
         throw Error("Advice not found [404].");
+      } else if(statusCode === 500) {
+        throw Error("Internal Server Error [500].");
       } else {
-        throw Error(`Response was not ok [${response.status}].`);
+        throw Error(`Network response was not ok [${statusCode}].`);
       }
     }
     const data = await response.json();
