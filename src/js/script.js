@@ -31,4 +31,5 @@ const getAdvice = (url) => {
     });
 }
 
+getAdvice(url);
 cardBtn.addEventListener("click", () => getAdvice(url));
