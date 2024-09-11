@@ -28,6 +28,9 @@ Your users should be able to:
 - [Frontend Mentor](https://www.frontendmentor.io/)
 - [Manrope font](https://fonts.google.com/specimen/Manrope)
 - [Webfonts helper](https://gwfh.mranftl.com/fonts)
+- [Inclusive buttons](https://css-tricks.com/making-disabled-buttons-more-inclusive/)
+- [Very good fetch tutorial](https://www.youtube.com/watch?v=ubw2hdQIl4E)
+- [Cache modes](https://stackoverflow.com/questions/29246444/fetch-how-do-you-make-a-non-cached-request)
 
 ## 🧑🏻‍💻 Author
 
