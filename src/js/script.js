@@ -8,9 +8,9 @@ const toggleActiveState = (element) => {
   element.disabled = !element.disabled;
 }
 
-const fetchAdvice = () => {
-  return fetch(url, { cache: "no-cache" })
-  .then(response => {
+const fetchAdvice = async () => {
+  try {
+    const response = await fetch(url, { cache: "no-cache" });
     if(!response.ok) {
       if(response.status === 404) {
         throw Error("Advice not found [404].");
@@ -18,25 +18,45 @@ const fetchAdvice = () => {
         throw Error(`Response was not ok [${response.status}].`);
       }
     }
-    return response.json();
-  })
-  .then(data => {
+    const data = await response.json();
     cardId.textContent = data.slip.id;
     cardAdvice.textContent = data.slip.advice;
-  })
-  .catch(error => {
+  } catch (error) {
     cardAdvice.innerHTML = `<span class="error">${error.message}</span>`;
     console.error("Fetch error: " + error.message);
-  })
+  }
 }
 
-const getAdvice = (url) => {
+const getAdvice = () => {
   toggleActiveState(cardBtn);
-  fetchAdvice(url)
+  fetchAdvice()
     .finally(() => {
       toggleActiveState(cardBtn);
     });
 }
 
-getAdvice(url);
-cardBtn.addEventListener("click", () => getAdvice(url));
+getAdvice();
+cardBtn.addEventListener("click", getAdvice);
+
+// == Old fetch function that uses .then() ==
+// const fetchAdvice = () => {
+//   return fetch(url, { cache: "no-cache" })
+//   .then(response => {
+//     if(!response.ok) {
+//       if(response.status === 404) {
+//         throw Error("Advice not found [404].");
+//       } else {
+//         throw Error(`Response was not ok [${response.status}].`);
+//       }
+//     }
+//     return response.json();
+//   })
+//   .then(data => {
+//     cardId.textContent = data.slip.id;
+//     cardAdvice.textContent = data.slip.advice;
+//   })
+//   .catch(error => {
+//     cardAdvice.innerHTML = `<span class="error">${error.message}</span>`;
+//     console.error("Fetch error: " + error.message);
+//   })
+// }
