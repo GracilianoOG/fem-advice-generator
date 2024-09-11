@@ -39,7 +39,7 @@
   transform: translate(-50%, 50%);
   transition: box-shadow 0.1s;
 }
-.card__button:hover {
+.card__button:hover:not(:disabled) {
   box-shadow: 0 0 18px 14px rgba(82, 255, 168, 0.3);
   filter: saturate(1.2);
 }

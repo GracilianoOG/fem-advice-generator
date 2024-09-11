@@ -35,7 +35,7 @@
     transform: translate(-50%, 50%);
     transition: box-shadow 0.1s;
 
-    &:hover {
+    &:hover:not(:disabled) {
       box-shadow: 0 0 18px 14px rgba(variables.$color-neon-green, 0.3);
       filter: saturate(1.2);
     }
