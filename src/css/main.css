@@ -88,4 +88,9 @@ body {
   min-height: 100vh;
   place-items: center;
   padding: 16px;
+}
+
+.disabled {
+  cursor: not-allowed;
+  filter: grayscale(0.8);
 }/*# sourceMappingURL=main.css.map */
