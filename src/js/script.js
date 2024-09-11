@@ -25,7 +25,10 @@ const getAdvice = (url) => {
       cardId.textContent = data.slip.id;
       cardAdvice.textContent = data.slip.advice;
     })
-    .catch(error => console.error("Fetch error: " + error.message))
+    .catch(error => {
+      cardAdvice.innerHTML = `<span class="error">${error.message}</span>`;
+      console.error("Fetch error: " + error.message);
+    })
     .finally(() => {
       toggleActiveState(cardBtn);
     });
