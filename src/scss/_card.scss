@@ -1,13 +1,14 @@
 @use "./variables";
 
 .card {
+  animation: grow-and-show 1.2s;
   background-color: variables.$color-dark-grayish-blue;
   border-radius: 10px;
+  max-width: variables.$max-width-card;
   padding: 42px 26px;
   padding-bottom: 58px;
   position: relative;
   text-align: center;
-  max-width: variables.$max-width-card;
 
   &__id {
     color: variables.$color-neon-green;

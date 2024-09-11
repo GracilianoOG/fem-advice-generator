@@ -7,13 +7,14 @@
   src: url("../assets/fonts/manrope-v15-latin-800.woff2") format("woff2");
 }
 .card {
+  animation: grow-and-show 1.2s;
   background-color: hsl(217, 19%, 24%);
   border-radius: 10px;
+  max-width: 33.75rem;
   padding: 42px 26px;
   padding-bottom: 58px;
   position: relative;
   text-align: center;
-  max-width: 33.75rem;
 }
 .card__id {
   color: hsl(150, 100%, 66%);
@@ -102,6 +103,16 @@ body {
   animation: loading 0.65s infinite linear;
 }
 
+@keyframes grow-and-show {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 @keyframes loading {
   from {
     transform: rotate(0deg);
