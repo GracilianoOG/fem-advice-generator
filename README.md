@@ -28,9 +28,11 @@ Your users should be able to:
 - [Frontend Mentor](https://www.frontendmentor.io/)
 - [Manrope font](https://fonts.google.com/specimen/Manrope)
 - [Webfonts helper](https://gwfh.mranftl.com/fonts)
+- [Buttons must have discerning text](https://dequeuniversity.com/rules/axe/4.6/button-name?application=axeAPI)
 - [Inclusive buttons](https://css-tricks.com/making-disabled-buttons-more-inclusive/)
 - [Very good fetch tutorial](https://www.youtube.com/watch?v=ubw2hdQIl4E)
 - [Cache modes](https://stackoverflow.com/questions/29246444/fetch-how-do-you-make-a-non-cached-request)
+- [Async functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
 
 ## 🧑🏻‍💻 Author
 
